@@ -1,0 +1,106 @@
+th,
+td {
+  padding: 7px;
+}
+.border-black {
+  border: 1px solid black;
+}
+.border-right {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.border-up {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.border-ttd {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.border-ttd-right {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.border-kosong {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.border-bawah {
+  border-bottom: 1px solid black;
+}
+.fs-7 {
+  font-size: x-small;
+}
+.fs-8 {
+  font-size: smaller;
+}
+.text-line {
+  line-height: 0.9rem;
+}
+.text-line_ket {
+  line-height: 1.4rem;
+}
+.text-line_ttd {
+  line-height: 0.5rem;
+}
+.font-line {
+  text-decoration: underline;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* --- Gambar Logo --- */
+.img-title {
+  width: 120px;
+  height: 100px;
+  float: left;
+}
+/* --- Akhir Gambar Logo --- */
+
+/* --- Form Surat --- */
+.text-surat {
+  text-decoration: underline;
+  font-style: italic;
+}
+/* --- Akhir Form Surat --- */
+
+.pre-surat {
+  overflow: auto;
+  white-space: pre-wrap;
+  background-color: white;
+  font-size: x-small;
+  text-decoration: none;
+  border: none;
+  line-height: 35px;
+}
+
+.none {
+  list-style-type: none !important;
+  list-style: none !important;
+}
+
+.small {
+  font-size: small;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-under {
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.smaller {
+  font-size: x-small;
+}

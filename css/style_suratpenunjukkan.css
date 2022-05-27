@@ -1,0 +1,40 @@
+/* --- Header Surat --- */
+.float {
+  float: left;
+}
+.img-surat {
+  width: 100px;
+  height: 100px;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.border-1 {
+  border: 2px solid black;
+}
+
+.text-justify {
+  text-align: justify;
+}
+/* --- Akhir Header Surat --- */
+
+pre {
+  background-color: white;
+  border: none;
+  line-height: 1px;
+}
+
+.ktn-float {
+  float: left;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.left {
+  float: left;
+  width: 40%;
+}

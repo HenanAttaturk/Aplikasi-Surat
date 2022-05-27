@@ -1,0 +1,11 @@
+.bg-whitesmoke {
+  background-color: whitesmoke;
+}
+
+button .btn-darkmode:active {
+  background-color: rgb(31, 26, 26) !important;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}

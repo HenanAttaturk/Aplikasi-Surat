@@ -1,0 +1,10 @@
+.kotak {
+  width: 800px;
+  background-color: burlywood;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.link {
+  padding-bottom: 5px;
+}

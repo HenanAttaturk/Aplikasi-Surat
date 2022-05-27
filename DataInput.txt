@@ -1,0 +1,144 @@
+<!-- Formulir Cetak -->
+    <div class="container">
+        <div class="row mt-3">
+            <!-- Kolom Kiri Utama -->
+            <div class="col-md-8 text-line border-black">
+                <table cellpadding="2">
+                    <tbody>
+                        <tr>
+                            <td>SKPD/BADAN/DINAS/KANTOR</td>
+                            <td>:</td>
+                            <td class="fs-8">DINAS KELAUTAN DAN PERIKANAN JAWA TENGAH</td>
+                        </tr>
+                        <tr>
+                            <td>TAHUN ANGGARAN</td>
+                            <td>:</td>
+                            <td class="fs-8"><?= $surat["tahun_anggaran"]; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="fs-5 text-center text-surat">SURAT BUKTI PENGELUARAN</p>
+
+                <table cellpadding="2">
+                    <tbody>
+                        <tr>
+                            <td>Dibayarkan Kepada</td>
+                            <td>:</td>
+                            <td><?= $surat["dibayarkan"]; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Uang Sejumlah Rp.</td>
+                            <td>:</td>
+                            <td><?= number_format($surat["uang_jumlah"]); ?></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:</td>
+                            <td class="fs-8 fw-bold"><?= terbilang($surat["uang_jumlah"]); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Untuk Pembayaran</td>
+                            <td>:</td>
+                            <td><?= $surat["untuk_pembayaran"]; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Untuk Pekerjaan / Keperluan</td>
+                            <td>:</td>
+                            <td><?= $surat["untuk_keperluan"]; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Kode Rek. / Kegiatan</td>
+                            <td>:</td>
+                            <td><?= $surat["kode_rekening"]; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Text Right -->
+                <div class="text-line_ttd">
+                    <p class="fs-8 text-end">Semarang, <?= tanggalIndo($surat["tanggal_terima"]); ?></p>
+                    <p class="fs-8 text-end">Yang Berhak Menerima</p>
+                    <p class="fs-8 text-end">Pembayaran</p>
+                    <br><br><br>
+                    <p class="fs-5 text-surat text-end">TERLAMPIR</p>
+                </div>
+                <!-- End Text Right -->
+            </div>
+            <!-- Akhir Kolom Kiri Utama -->
+
+
+            <!-- Kolom Kanan -->
+            <div class="col-md-4 text-line_ket border-right">
+                <p class="fs-5 text-center">KETERANGAN</p>
+                <p class="fs-8">Barang-barang bermaksud telah masuk buku Persediaan / Inventaris pada tanggal <?= tanggalIndo($surat["tanggal_inventaris"]); ?></p><br>
+
+                <!-- Kolom Keterangan -->
+                <div class="row">
+                    <div class="col-sm-4 border-right">
+                        <p class="fs-8 text-center">Jumlah Kotor</p>
+                    </div>
+                    <div class="col-sm-4 border-right">
+                        <p class="fs-8 text-center">Pajak</p>
+                    </div>
+                    <div class="col-sm-4 border-up">
+                        <p class="fs-8 text-center">Jumlah Bersih</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 border-kosong">
+                        <p class="fs-8 text-center"><?= $surat["jumlah_kotor"]; ?></p>
+                    </div>
+                    <div class="col-sm-4 border-kosong">
+                        <p class="fs-8 text-center"><?= $surat["pajak"]; ?></p>
+                    </div>
+                    <div class="col-sm-4 border-bawah">
+                        <p class="fs-8 text-center"><?= $surat["jumlah_bersih"]; ?></p>
+                    </div>
+                </div>
+
+                <!-- Akhir Kolom Keterangan -->
+                <p class="fs-8">Pengeluaran / pembelian dilakukan berdasarkan :</p><br>
+                <p class="fs-8">Yang Menerima barang / memeriksa pekerjaan tersebut diatas :</p>
+                <br>
+                <p class="fs-8 text-center"><?= $surat["yang_menerima"]; ?></p>
+            </div>
+            <!-- Kolom Kanan -->
+
+        </div>
+
+        <!-- Kolom Tanda Tangan -->
+        <div class="row">
+            <div class="col-md-4 border-ttd">
+                <p class="fs-8 text-center">BENDAHARA PENGELUARAN</p>
+                <br><br>
+                <div class="text-line_ttd">
+                    <p class="fs-7 text-center fw-bolder font-line"><?= $surat["nama_bendahara"]; ?></p>
+                    <p class="fs-7 text-center fw-bolder">NIP. <?= $surat["nip_bendahara"]; ?></p>
+                </div>
+            </div>
+
+            <div class="col-md-4 border-ttd">
+                <p class="fs-8 text-center">PENGGUNA ANGGARAN</p>
+                <br><br>
+                <div class="text-line_ttd">
+                    <p class="fs-7 text-center fw-bolder font-line"><?= $surat["nama_pengguna"]; ?></p>
+                    <p class="fs-7 text-center fw-bolder">NIP. <?= $surat["nip_pengguna"]; ?></p>
+                </div>
+            </div>
+
+            <div class="col-md-4 border-ttd-right">
+                <p class="fs-8 text-center">PEJABAT PELAKSANA</p>
+                <br><br>
+                <div class="text-line_ttd">
+                    <p class="fs-7 text-center fw-bolder font-line"><?= $surat["nama_pelaksana"]; ?></p>
+                    <p class="fs-7 text-center fw-bolder">NIP. <?= $surat["nip_pelaksana"]; ?></p>
+                </div>
+            </div>
+
+            <a href="daftarcetak.php" class="mt-3 btn btn-block btn-success" target="_blank">Masuk Ke Tabel Data</a>
+
+        </div>
+        <!-- Akhir Kolom Tanda Tangan -->
+    </div>
+    <!-- Akhir Formulir Cetak -->
